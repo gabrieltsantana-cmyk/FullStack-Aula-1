@@ -3,78 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Seu Nome</title>
+    <title>Portfólio - Seu Nome</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 24px #0002;}
-        h1 { color: #2c3e50; }
-        h2 { color: #2980b9; margin-top: 32px;}
-        ul { padding-left: 20px; }
-        .section { margin-bottom: 28px; }
-        .info { margin-bottom: 20px; }
-        .contact span { margin-right: 24px; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        header {
+            background: #2980b9;
+            color: #fff;
+            padding: 32px 0 24px 0;
+            text-align: center;
+            box-shadow: 0 2px 12px #0001;
+        }
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        nav {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+        nav a {
+            background: #fff;
+            color: #2980b9;
+            padding: 10px 28px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #0001;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #2980b9;
+            color: #fff;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px #0002;
+            padding: 40px 32px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-bottom: 16px;
+            border-left: 4px solid #2980b9;
+            padding-left: 12px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: #f5faff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #0001;
+            padding: 20px;
+            transition: transform 0.15s;
+        }
+        .project-card:hover {
+            transform: translateY(-4px) scale(1.03);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .skills-list, .languages-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .languages-list li {
+            background: #eaf6fb;
+            color: #2980b9;
+            padding: 8px 18px;
+            border-radius: 18px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        @media (max-width: 600px) {
+            main { padding: 18px 6px; }
+            header { padding: 24px 0 16px 0; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Seu Nome Completo</h1>
-        <div class="info contact">
-            <span>Email: seuemail@email.com</span>
-            <span>Telefone: (99) 99999-9999</span>
-            <span>Cidade, Estado</span>
-            <span>LinkedIn: linkedin.com/in/seulink</span>
-        </div>
-        <div class="section">
-            <h2>Resumo Profissional</h2>
+        <p>Desenvolvedor(a) Full Stack | Apaixonado(a) por tecnologia e inovação</p>
+        <nav>
+            <a href="#sobre" class="active">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
             <p>
-                Profissional com experiência em [Sua Área], especializado em [Suas Especialidades]. 
-                Apaixonado por tecnologia, inovação e busca constante por aprendizado. 
+                Sou um(a) desenvolvedor(a) com experiência em [Sua Área], especializado(a) em [Suas Especialidades]. 
+                Busco sempre aprender novas tecnologias e criar soluções inovadoras.
             </p>
-        </div>
-        <div class="section">
-            <h2>Experiência Profissional</h2>
-            <ul>
-                <li>
-                    <strong>Cargo</strong> - Empresa<br>
-                    <em>MM/AAAA - MM/AAAA</em><br>
-                    Descreva suas atividades e conquistas neste cargo.
-                </li>
-                <li>
-                    <strong>Cargo</strong> - Empresa<br>
-                    <em>MM/AAAA - MM/AAAA</em><br>
-                    Descreva suas atividades e conquistas neste cargo.
-                </li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Formação Acadêmica</h2>
-            <ul>
-                <li>
-                    <strong>Curso</strong> - Instituição<br>
-                    <em>MM/AAAA - MM/AAAA</em>
-                </li>
-                <li>
-                    <strong>Curso</strong> - Instituição<br>
-                    <em>MM/AAAA - MM/AAAA</em>
-                </li>
-            </ul>
-        </div>
-        <div class="section">
+        </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div>
+            </div>
+        </section>
+        <section id="habilidades">
             <h2>Habilidades</h2>
-            <ul>
-                <li>Habilidade 1</li>
-                <li>Habilidade 2</li>
-                <li>Habilidade 3</li>
-                <li>Habilidade 4</li>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git</li>
             </ul>
-        </div>
-        <div class="section">
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Idioma 1 - Nível</li>
-                <li>Idioma 2 - Nível</li>
+            <h2 style="margin-top:32px;">Idiomas</h2>
+            <ul class="languages-list">
+                <li>Português - Nativo</li>
+                <li>Inglês - Intermediário</li>
             </ul>
-        </div>
-    </div>
-</body>
-</html>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <span><strong>Email:</strong> seuemail@email.com</span>
+                <span><strong>Telefone:</strong> (99) 99999-9999</span>
+                <span><strong>Cidade:</strong> Sua Cidade/Estado</span>
+                <span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seulink" target="_blank">linkedin.com/in/seulink</a></span>
+            </div>
